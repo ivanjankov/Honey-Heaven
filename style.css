@@ -1,0 +1,71 @@
+/* ------------ */
+/* RESET */
+/* ------------ */
+
+:root {
+	/* colors */
+	--clr-orange: #c74817;
+	--clr-text: #3c3c3c;
+	--clr-grey: #dfe0df;
+	--clr-cream: #f5f0ed;
+	--clr-light: #fff8ea;
+
+	/* font-size */
+
+	/* Heading */
+	--fs-900: clamp(2rem, 7vw + 1rem, 4.5rem);
+	--fs-800: 3.125rem;
+	--fs-700: 2.62rem;
+
+	/* paragrapghs */
+	--fs-600: 1.375rem;
+	--fs-500: 1.25rem;
+	--fs-400: 1.125rem;
+	--fs-300: 1rem;
+	--fs-200: 0.875rem;
+
+	/* font-family */
+	--ff-oswald: 'Oswald', sans-serif;
+	--ff-shadows: 'Shadows Into Light Two', cursive;
+	--ff-roboto: 'Roboto', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+picture {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	font-weight: 400;
+}
+
+/* set the body */
+
+body {
+	font-family: var(--ff-oswald);
+	font-size: var(--fs-400);
+	color: var(--clr-text);
+	background-color: var(--clr-cream);
+	line-height: 1.5;
+	overflow-x: hidden;
+}
+
+img,
+picture {
+	max-width: 100%;
+}
