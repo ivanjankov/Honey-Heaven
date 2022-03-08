@@ -68,9 +68,15 @@ body {
 img,
 picture {
 	max-width: 100%;
+	display: block;
 }
 
 /* general */
+
+.container {
+	max-width: 60em;
+	margin-inline: auto;
+}
 
 .flex {
 	display: flex;
@@ -79,4 +85,111 @@ picture {
 .grid {
 	display: grid;
 	gap: var(--gap, 1rem);
+}
+
+.ff-roboto {
+	font-family: var(--ff-roboto);
+}
+
+.relative {
+	position: relative;
+}
+
+/* styling */
+
+header {
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+	max-width: 60px;
+}
+.nav {
+	list-style: none;
+	--gap: 3rem;
+}
+
+.nav-link {
+	position: relative;
+	text-decoration: none;
+	color: var(--clr-text);
+	font-weight: 500;
+}
+
+.nav-link.active {
+	color: var(--clr-orange);
+	text-underline-offset: 0.45em;
+}
+
+.nav-link.active:after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 2px;
+	bottom: -4px;
+	left: 0;
+	background-color: var(--clr-orange);
+}
+
+.nav-link::before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 2px;
+	bottom: -4px;
+	left: 0;
+	background-color: var(--clr-orange);
+	transform: scaleX(0);
+	transition: transform 0.3s ease;
+}
+
+.nav-link:hover::before {
+	transform: scaleX(1);
+}
+
+/* subdropdown */
+.product-nav-wrapper:hover > .product-dropdown,
+.product-dropdown:hover {
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.5s ease;
+}
+
+.product-dropdown {
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	text-transform: uppercase;
+	list-style: none;
+	padding-top: 0.55rem;
+	padding: 0.55rem 1.5rem 0.55rem 1rem;
+	background-color: #fff;
+	left: 0;
+	transition: all 0.5s ease;
+}
+
+.product-dropdown a {
+	text-decoration: none;
+	color: var(--clr-text);
+	font-size: var(--fs-200);
+	font-weight: 500;
+}
+
+.product-dropdown a:hover {
+	color: var(--clr-orange);
+}
+
+.triangle {
+	position: absolute;
+	top: -5px;
+	left: 5px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #fff;
 }
