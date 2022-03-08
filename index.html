@@ -21,6 +21,10 @@
 			href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap"
 			rel="stylesheet"
 		/>
+		<!-- Plyr -->
+		<link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
+
+		<!-- Custom style -->
 		<link rel="stylesheet" href="style.css" />
 
 		<title>Honey Hive</title>
@@ -84,6 +88,54 @@
 					class="intro-honeyhive absolute"
 				/>
 			</div>
+			<div class="section-amazing">
+				<div class="grid-container-magic">
+					<div class="relative">
+						<div class="amazing-wrapper-text">
+							<h2 class="">This is where magic happens</h2>
+							<p>
+								Etiam diam odio, lobortis sagittis tristique et, congue
+								tristique dui. Sed sed nisi odio. Duis euismod felis mauris, nec
+								dapibus urna porttitor ut. Curabitur at gravida nisi. Quisque a
+								blandit magna, hendrerit ullamcorper est. Curabitur sed suscipit
+								arcu.
+							</p>
+							<p>
+								Etiam diam odio, lobortis sagittis tristique et, congue
+								tristique dui. Sed sed nisi odio. Duis euismod felis mauris, nec
+								dapibus urna porttitor ut. Curabitur at gravida nisi. Quisque a
+								blandit magna, hendrerit ullamcorper est. Curabitur sed suscipit
+								arcu.
+							</p>
+						</div>
+						<div class="beehive-container absolute">
+							<img src="img/assets/beehive.png" alt="Bee Hive" />
+							<img
+								class="magic-bee absolute"
+								src="img/assets/bee.png"
+								alt="Bee Illustration"
+							/>
+						</div>
+					</div>
+					<div>
+						<video
+							id="player"
+							playsinline
+							controls="false"
+							data-poster="/video/video-tumbnail.png"
+						>
+							<source src="/video/about-us.mp4" type="video/mp4" />
+							<source src="/path/to/video.webm" type="video/webm" />
+						</video>
+					</div>
+				</div>
+			</div>
 		</main>
+		<script src="https://cdn.plyr.io/3.6.12/plyr.polyfilled.js"></script>
+		<script>
+			const player = new Plyr('#player', {
+				title: 'Example Title',
+			});
+		</script>
 	</body>
 </html>

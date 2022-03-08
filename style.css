@@ -28,8 +28,11 @@
 	--ff-oswald: 'Oswald', sans-serif;
 	--ff-shadows: 'Shadows Into Light Two', cursive;
 	--ff-roboto: 'Roboto', sans-serif;
-}
 
+	/* player setup */
+	--plyr-color-main: #c74817;
+	--plyr__controls: hidden;
+}
 *,
 *:before,
 *:after {
@@ -66,7 +69,8 @@ body {
 }
 
 img,
-picture {
+picture,
+video {
 	max-width: 100%;
 	display: block;
 }
@@ -300,4 +304,51 @@ header {
 	100% {
 		transform: translateY(0px);
 	}
+}
+
+/* where magic happens */
+
+.grid-container-magic {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin-block: 3rem;
+}
+.plyr__control--overlaid {
+	padding: calc(var(--plyr-control-spacing, 10px) * 2.5);
+}
+
+.grid-container-magic > :first-child {
+	display: grid;
+	place-items: center;
+	padding: 3rem;
+	background-color: var(--clr-light);
+	transform: translateY(-50px);
+	/* margin-top: -3rem;
+	margin-bottom: 3rem; */
+}
+
+.amazing-wrapper-text > h2 {
+	font-family: var(--ff-shadows);
+	color: var(--clr-orange);
+	font-size: var(--fs-800);
+	margin-bottom: 3rem;
+}
+
+.amazing-wrapper-text > p {
+	max-width: 60ch;
+	margin-bottom: 2rem;
+}
+
+.beehive-container {
+	max-width: 70px;
+	right: 3rem;
+	bottom: 1rem;
+}
+
+.magic-bee {
+	width: 25px;
+	height: auto;
+	right: -1.8rem;
+	top: 0;
+	animation: flyingbeeleft 2s linear infinite;
 }
