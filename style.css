@@ -356,6 +356,10 @@ header {
 
 /* section-characteristic */
 
+.section-characteristic {
+	margin-block: 8rem;
+}
+
 .grid-container-characteristic {
 	display: flex;
 	justify-content: space-around;
@@ -371,7 +375,8 @@ header {
 .characteristic-heading {
 	font-size: var(--fs-700);
 	max-width: 22ch;
-	padding-left: 1.5rem;
+	text-align: center;
+	margin-inline: auto;
 }
 
 .characteristic-media {
@@ -433,4 +438,33 @@ header {
 	right: -300px;
 	max-width: 40%;
 	z-index: -1;
+}
+
+/* about section */
+
+.grid-template-about {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 4rem;
+	/* place-items: center space-between; */
+}
+
+.about-description {
+	padding: 2rem;
+}
+
+.about-description > h2 {
+	font-size: var(--fs-700);
+	letter-spacing: 1px;
+	margin-bottom: 2rem;
+}
+
+.about-description > h2 span {
+	font-family: var(--ff-shadows);
+	color: var(--clr-orange);
+}
+
+.about-image {
+	display: grid;
+	place-content: center;
 }
