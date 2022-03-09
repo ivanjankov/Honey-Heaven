@@ -3,6 +3,7 @@
 /* ------------ */
 
 :root {
+	font-size: 16px;
 	/* colors */
 	--clr-orange: #c74817;
 	--clr-text: #3c3c3c;
@@ -363,6 +364,10 @@ header {
 	margin-block: 3rem;
 }
 
+.single-characteristic > p {
+	font-size: 1.75rem;
+}
+
 .characteristic-heading {
 	font-size: var(--fs-700);
 	max-width: 22ch;
@@ -401,7 +406,7 @@ header {
 }
 
 .media-icon > p {
-	transform: translateY(150px);
+	transform: translateX(150px);
 	padding-left: 1rem;
 	opacity: 0;
 	transition: all 0.8s ease;
@@ -414,7 +419,7 @@ header {
 .characteristic-media:hover > .media-icon p {
 	transform: translateX(0px);
 	opacity: 1;
-	transition: all 0.8s ease;
+	transition: all 1.8 s ease;
 }
 
 .bottom-left {
