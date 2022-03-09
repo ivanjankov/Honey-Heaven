@@ -468,3 +468,70 @@ header {
 	display: grid;
 	place-content: center;
 }
+
+/* PRODUCTS */
+
+.products {
+	margin-block: 4rem;
+	overflow: hidden;
+}
+
+.products > h2 {
+	font-size: var(--fs-700);
+	text-align: center;
+}
+
+.products > p {
+	text-align: center;
+	max-width: 80ch;
+	margin-inline: auto;
+}
+
+.products-wrapper {
+	--gap: 4rem;
+	padding-block: 2rem;
+}
+
+.product {
+	flex: 1 1 100%;
+	text-align: center;
+}
+
+.product > *:where(:not(:last-child)) {
+	margin-bottom: 0.75rem;
+}
+
+.product-image > img {
+	margin-inline: auto;
+	max-width: 80%;
+}
+
+.product-title {
+	font-size: 1.75rem;
+}
+
+.product-price {
+	color: var(--clr-orange);
+	font-size: var(--fs-400);
+}
+
+.product-description > p {
+	font-size: var(--fs-300);
+	font-weight: 200 !important;
+	max-width: 25ch;
+	margin-inline: auto;
+}
+
+.honeydrop-bee {
+	background-image: url('img/assets/honey-drop.png');
+	width: 100px;
+	aspect-ratio: 1;
+	background-size: cover;
+	background-repeat: no-repeat;
+	top: 100px;
+	right: -20px;
+}
+
+.honeydrop-bee > .bee {
+	left: -30px;
+}
