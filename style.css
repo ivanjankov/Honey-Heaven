@@ -717,3 +717,123 @@ header {
 .honeydrop-bee-left > *:last-child {
 	right: 0px;
 }
+
+/* Benefits */
+
+#benefits {
+	position: relative;
+	overflow: hidden;
+}
+
+.section-heading {
+	text-align: center;
+}
+
+.section-heading > h2 {
+	font-size: var(--fs-700);
+	margin-block: 1rem;
+}
+
+.section-heading > p {
+	max-width: 60ch;
+	margin-inline: auto;
+}
+
+.benefits-container {
+	display: flex;
+	flex-wrap: wrap;
+	place-content: center;
+	gap: 5rem;
+	margin-block: 2rem;
+}
+
+.single-benefit {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	background-color: #fff;
+	padding-inline: 1.5rem;
+}
+
+.polygon-shape {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+	background-color: var(--clr-orange);
+	margin-left: -50px;
+}
+
+.order-2 {
+	order: 2;
+	margin-left: 0;
+	margin-right: -50px;
+}
+
+.polygon-shape:before {
+	position: absolute;
+	content: '';
+	width: 146px;
+	height: 146px;
+	inset: 4px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+	background-color: #fff;
+	display: block;
+}
+
+.polygon-shape > img {
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.single-benefits-content > * {
+	margin-block: 0.5rem;
+}
+
+.single-benefits-content > h4 {
+	font-size: var(--fs-400);
+	font-weight: 500;
+}
+
+.single-benefits-content > p {
+	font-family: var(--ff-roboto);
+	font-size: var(--fs-300);
+}
+
+.single-benefits-content > a {
+	position: relative;
+	text-decoration: none;
+	font-size: var(--fs-200);
+	font-weight: 500;
+	text-transform: uppercase;
+	color: var(--clr-orange);
+}
+.single-benefits-content > a:after {
+	position: relative;
+	content: '';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	content: '\f0da';
+	font-size: 1rem;
+	right: -5px;
+}
+.single-benefits-content > a:hover:after {
+	right: -15px;
+	transition: all 0.3s ease;
+}
+
+.center-absolute-jar {
+	position: absolute;
+	left: 50%;
+	height: 100%;
+	width: auto;
+	transform: translateX(-50%);
+	opacity: 0.022;
+}
